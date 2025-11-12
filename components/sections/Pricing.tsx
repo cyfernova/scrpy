@@ -241,7 +241,7 @@ const Pricing: React.FC = () => {
           ref={pricingRef}
           className="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-3 gap-6 sm:gap-8 mb-12 sm:mb-16"
         >
-          {pricingPlans.map((plan, index) => (
+          {pricingPlans.map((plan) => (
             <div key={plan.name} className="pricing-card relative">
               {plan.popular && (
                 <div className="popular-badge absolute -top-3 sm:-top-4 left-1/2 transform -translate-x-1/2 z-10">
@@ -374,7 +374,7 @@ const Pricing: React.FC = () => {
                     30-Day Money Back Guarantee
                   </Heading>
                   <Body className="text-emerald-700 text-sm sm:text-base">
-                    Try Scrpy risk-free. If you're not satisfied, get a full
+                    Try Scrpy risk-free. If you&apos;re not satisfied, get a full
                     refund.
                   </Body>
                 </div>
@@ -413,7 +413,7 @@ const Pricing: React.FC = () => {
                   Frequently Asked Questions
                 </Heading>
                 <Body className="text-stone-600 mb-6">
-                  Have questions about pricing or features? We've got answers.
+                  Have questions about pricing or features? We&apos;ve got answers.
                 </Body>
 
                 <div className="space-y-4">
@@ -432,7 +432,7 @@ const Pricing: React.FC = () => {
                       What happens if I exceed my limits?
                     </summary>
                     <p className="text-sm text-stone-600 ml-6">
-                      We'll notify you when you're approaching your limits. You
+                      We&apos;ll notify you when you&apos;re approaching your limits. You
                       can upgrade temporarily or permanently.
                     </p>
                   </details>

@@ -6,18 +6,16 @@ import {
   Twitter,
   Linkedin,
   Mail,
-  Phone,
-  MapPin,
   Globe,
   Zap,
   Shield,
-  Terminal,
-  Code,
   ArrowUp,
   Chrome,
+  Terminal,
+  Code,
 } from "lucide-react";
 import { Heading, Body } from "@/components/ui";
-import { Container, Section } from "@/components/layout";
+import { Container } from "@/components/layout";
 
 gsap.registerPlugin(ScrollTrigger);
 

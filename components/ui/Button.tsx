@@ -114,7 +114,6 @@ export const ButtonLink: React.FC<ButtonLinkProps> = ({
   size = "md",
   children,
   className = "",
-  magnetic = false,
   ...props
 }) => {
   const baseClasses =

@@ -237,7 +237,7 @@ const UseCases: React.FC = () => {
                 <div className="bg-white rounded-2xl p-6 border border-stone-200 shadow-lg mb-8">
                   <Quote className="w-6 h-6 text-sky-500 mb-4" />
                   <blockquote className="text-stone-700 italic mb-4">
-                    "{useCase.quote}"
+                    &quot;{useCase.quote}&quot;
                   </blockquote>
                   <div>
                     <div className="font-semibold text-stone-900">

@@ -77,7 +77,7 @@ export const useStaggeredAnimation = (
   itemCount: number,
   options: AnimationOptions & { staggerDelay?: number } = {}
 ) => {
-  const { staggerDelay = 100, ...animationOptions } = options;
+  const { staggerDelay = 100 } = options;
   const [visibleItems, setVisibleItems] = useState<Set<number>>(new Set());
   const containerRef = useRef<HTMLElement>(null);
 
@@ -89,7 +89,6 @@ export const useStaggeredAnimation = (
       (entries) => {
         if (entries[0].isIntersecting) {
           // Animate items with stagger
-          const newVisibleItems = new Set<number>();
           for (let i = 0; i < itemCount; i++) {
             setTimeout(() => {
               setVisibleItems(prev => new Set(prev).add(i));
@@ -126,7 +125,7 @@ export const usePerformanceMonitor = () => {
   const [fps, setFps] = useState(60);
   const [isLowPerformance, setIsLowPerformance] = useState(false);
   const frameCount = useRef(0);
-  const lastTime = useRef(performance.now());
+  const lastTime = useRef(0);
 
   useEffect(() => {
     let animationId: number;
@@ -147,6 +146,7 @@ export const usePerformanceMonitor = () => {
       animationId = requestAnimationFrame(measureFPS);
     };
 
+    lastTime.current = performance.now();
     animationId = requestAnimationFrame(measureFPS);
 
     return () => {
@@ -181,11 +181,16 @@ export const useReducedMotion = () => {
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
     // Check for low-end device (based on memory and cores)
+    const deviceMemory = (navigator as { deviceMemory?: number }).deviceMemory;
+    const hardwareConcurrency = (navigator as { hardwareConcurrency?: number }).hardwareConcurrency;
     const isLowEndDevice =
-      (navigator as any).deviceMemory <= 2 ||
-      (navigator as any).hardwareConcurrency <= 2;
+      (typeof deviceMemory === 'number' && deviceMemory <= 2) ||
+      (typeof hardwareConcurrency === 'number' && hardwareConcurrency <= 2);
 
-    setShouldReduceMotion(prefersReducedMotion || isLowEndDevice);
+    // Use requestAnimationFrame to avoid setting state synchronously
+    requestAnimationFrame(() => {
+      setShouldReduceMotion(prefersReducedMotion || isLowEndDevice);
+    });
   }, []);
 
   return {

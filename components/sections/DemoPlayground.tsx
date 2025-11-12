@@ -4,8 +4,6 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import {
   Play,
   Copy,
-  Terminal,
-  Zap,
   CheckCircle,
   ArrowRight,
   Sparkles,

@@ -147,7 +147,7 @@ const Comparison: React.FC = () => {
             Why Developers Choose Scrpy
           </Heading>
           <Body size="lg" className="max-w-3xl mx-auto text-stone-600">
-            Stop fighting with traditional scraping limitations. See how Scrpy's
+            Stop fighting with traditional scraping limitations. See how Scrpy&apos;s
             client-side approach transforms web data extraction.
           </Body>
         </div>

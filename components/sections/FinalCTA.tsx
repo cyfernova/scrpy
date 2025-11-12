@@ -12,7 +12,6 @@ import {
   Globe,
   Code,
   Sparkles,
-  Terminal,
 } from "lucide-react";
 import { Heading, Body, Button } from "@/components/ui";
 import { Container, Section } from "@/components/layout";
@@ -300,9 +299,9 @@ const FinalCTA: React.FC = () => {
                     Loved by 5,000+ Developers
                   </div>
                   <Body className="text-stone-600">
-                    "Scrpy has completely transformed how we work with
-                    documentation. It\'s like having a superpower for AI
-                    development."
+                    &quot;Scrpy has completely transformed how we work with
+                    documentation. It&apos;s like having a superpower for AI
+                    development.&quot;
                   </Body>
                 </div>
 

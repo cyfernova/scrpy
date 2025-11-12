@@ -183,7 +183,7 @@ const Partners: React.FC = () => {
           </Heading>
 
           <Body size="lg" className="max-w-3xl mx-auto text-stone-600">
-            Scrpy seamlessly integrates with the world's leading AI coding
+            Scrpy seamlessly integrates with the world&apos;s leading AI coding
             platforms. Transform documentation into intelligent endpoints for
             your favorite tools.
           </Body>

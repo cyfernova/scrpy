@@ -2,23 +2,41 @@ import React, { useRef, useEffect } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import {
-  Shield,
   Zap,
   Globe,
   Database,
   Cloud,
-  Code,
   Lock,
-  Sparkles,
   ArrowRight,
   Play,
   BarChart3,
 } from "lucide-react";
 import { Heading, Body, Button } from "@/components/ui";
 import { Container, Section } from "@/components/layout";
-import { Card } from "@/components/ui";
 import { cn } from "@/lib/utils/utils";
 import { useGSAPCleanup } from "@/lib/hooks/useGSAP";
+
+interface Metric {
+  label: string;
+  value?: string;
+}
+
+interface FeatureBox {
+  id: string;
+  size: "small" | "large" | "full";
+  title: string;
+  description: string;
+  icon: React.ReactNode;
+  gradient: string;
+  features?: string[];
+  codeSnippet?: string;
+  metric?: string;
+  partners?: string[];
+  stats?: string;
+  badge?: string;
+  metrics?: Metric[];
+  worldMap?: boolean;
+}
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -159,7 +177,7 @@ const result = await scrpy.scrape({
     registerScrollTrigger(parallaxTrigger);
   }, [registerScrollTrigger]);
 
-  const renderFeatureBox = (box: any, index: number) => {
+  const renderFeatureBox = (box: FeatureBox, index: number) => {
     const baseClasses =
       "rounded-3xl border border-stone-200 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 overflow-hidden relative";
     const gradientClasses = `bg-gradient-to-br ${box.gradient}`;
@@ -317,7 +335,7 @@ const result = await scrpy.scrape({
 
                 {/* Stats */}
                 <div className="grid grid-cols-2 gap-4 mb-8">
-                  {box.metrics.map((metric: any, i: number) => (
+                  {box.metrics?.map((metric: Metric, i: number) => (
                     <div
                       key={i}
                       className="bg-white/60 backdrop-blur rounded-xl p-4"

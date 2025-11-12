@@ -61,7 +61,7 @@ export const Card = forwardRef<HTMLDivElement, CardProps>(({
       card.removeEventListener('mousemove', handleMouseMove);
       card.removeEventListener('mouseleave', handleMouseLeave);
     };
-  }, [tilt]);
+  }, [tilt, cardRef]);
 
   const variantClasses = {
     default: 'bg-white border border-stone-200',

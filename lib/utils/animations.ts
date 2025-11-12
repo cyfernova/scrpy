@@ -152,7 +152,7 @@ export class AnimationUtils {
       speed?: number;
     } = {}
   ) {
-    const { duration = 1, chars = '!<>-_\\/[]{}—=+*^?#________', speed = 50 } = options;
+    const { chars = '!<>-_\\/[]{}—=+*^?#________', speed = 50 } = options;
 
     let iteration = 0;
     const originalText = finalText;
@@ -256,7 +256,6 @@ export class AnimationUtils {
       for (let i = 0; i < points; i++) {
         const angle = (i / points) * Math.PI * 2;
         const nextAngle = ((i + 1) / points) * Math.PI * 2;
-        const controlRadius = radius + Math.sin(time + i) * 20;
 
         const x1 = Math.cos(angle) * radius + Math.sin(time + i) * 30;
         const y1 = Math.sin(angle) * radius + Math.cos(time + i) * 30;

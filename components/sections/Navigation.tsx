@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
-import { Menu, X, Github, Chrome } from "lucide-react";
+import { Menu, X, Chrome } from "lucide-react";
 import { Button } from "@/components/ui";
-import { Container } from "@/components/layout";
 import { cn } from "@/lib/utils/utils";
 
 const Navigation: React.FC = () => {

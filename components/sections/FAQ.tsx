@@ -285,7 +285,7 @@ const FAQ: React.FC = () => {
             </div>
 
             <Heading size="h3" className="mb-4">
-              Can't find what you're looking for?
+              Can&apos;t find what you&apos;re looking for?
             </Heading>
 
             <Body size="lg" className="text-stone-600 mb-8">
