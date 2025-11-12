@@ -113,43 +113,41 @@ const Hero: React.FC = () => {
 
       {/* Enhanced floating geometric shapes */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-20 left-10 w-72 h-72 bg-sky-200/20 rounded-full mix-blend-multiply filter blur-xl animate-float animate-optimized" />
+        <div className="absolute top-12 sm:top-20 left-6 sm:left-10 w-48 h-48 sm:w-72 sm:h-72 bg-sky-200/20 rounded-full mix-blend-multiply filter blur-xl animate-float animate-optimized" />
         <div
-          className="absolute top-40 right-20 w-96 h-96 bg-yellow-200/20 rounded-full mix-blend-multiply filter blur-xl animate-float animate-optimized"
+          className="absolute top-24 sm:top-40 right-6 sm:right-20 w-56 h-56 sm:w-96 sm:h-96 bg-yellow-200/20 rounded-full mix-blend-multiply filter blur-xl animate-float animate-optimized"
           style={{ animationDelay: "2s" }}
         />
         <div
-          className="absolute bottom-20 left-1/3 w-80 h-80 bg-amber-200/20 rounded-full mix-blend-multiply filter blur-xl animate-float animate-optimized"
+          className="absolute bottom-12 sm:bottom-20 left-1/4 sm:left-1/3 w-40 h-40 sm:w-80 sm:h-80 bg-amber-200/20 rounded-full mix-blend-multiply filter blur-xl animate-float animate-optimized"
           style={{ animationDelay: "4s" }}
         />
 
         {/* Additional animated elements */}
-        <div className="absolute top-1/4 left-1/4 w-32 h-32 bg-gradient-to-br from-sky-400/20 to-yellow-400/20 rounded-full animate-pulse pause-on-hover" />
+        <div className="absolute top-1/4 left-1/4 w-16 h-16 sm:w-32 sm:h-32 bg-gradient-to-br from-sky-400/20 to-yellow-400/20 rounded-full animate-pulse pause-on-hover" />
         <div
-          className="absolute bottom-1/4 right-1/4 w-24 h-24 bg-gradient-to-br from-amber-400/20 to-pink-400/20 rounded-full animate-pulse pause-on-hover"
+          className="absolute bottom-1/4 right-1/4 w-12 h-12 sm:w-24 sm:h-24 bg-gradient-to-br from-amber-400/20 to-pink-400/20 rounded-full animate-pulse pause-on-hover"
           style={{ animationDelay: "1s" }}
         />
       </div>
 
       <Container size="xl" className="relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center min-h-[80vh]">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center min-h-[70vh] lg:min-h-[80vh] py-8 lg:py-0">
           {/* Left Column - Content */}
-          <div className="text-center lg:text-left">
-            <Eyebrow className="mb-6">AI Infrastructure</Eyebrow>
+          <div className="text-center lg:text-left order-2 lg:order-1">
+            <Eyebrow className="mb-4 sm:mb-6">AI Infrastructure</Eyebrow>
 
-            <Heading ref={headlineRef} size="h1" className="mb-8">
-              Transform Documentation
-              <br />
-              Into Intelligent
-              <br />
-              <span className="gradient-text">MCP Endpoints</span>
+            <Heading ref={headlineRef} size="h1" className="mb-6 sm:mb-8">
+              <span className="block">Transform Documentation</span>
+              <span className="block">Into Intelligent</span>
+              <span className="gradient-text block">MCP Endpoints</span>
             </Heading>
 
             <div
               ref={subheadlineRef}
-              className="max-w-2xl mx-auto lg:mx-0 mb-12"
+              className="max-w-2xl mx-auto lg:mx-0 mb-8 sm:mb-12"
             >
-              <Body size="lg" className="text-stone-600">
+              <Body size="lg" className="text-stone-600 text-base sm:text-lg">
                 Client-side scraping meets enterprise AI. Deploy
                 production-ready MCP servers for Claude Code, Kilo Code, Cline,
                 and OpenCode in seconds.
@@ -158,74 +156,74 @@ const Hero: React.FC = () => {
 
             <div
               ref={ctaContainerRef}
-              className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
+              className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start mb-6 sm:mb-8"
             >
-              <Button size="lg" magnetic className="w-full sm:w-auto">
+              <Button size="lg" magnetic className="w-full sm:w-auto min-h-[48px]">
                 Start Building Free
-                <ArrowRight className="w-5 h-5" />
+                <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5" />
               </Button>
 
               <Button
                 variant="secondary"
                 size="lg"
-                className="w-full sm:w-auto"
+                className="w-full sm:w-auto min-h-[48px]"
               >
-                <Play className="w-5 h-5" />
+                <Play className="w-4 h-4 sm:w-5 sm:h-5" />
                 Watch Demo
               </Button>
             </div>
 
-            <div className="mt-8 flex items-center justify-center lg:justify-start gap-6 text-sm text-stone-500">
+            <div className="flex flex-wrap items-center justify-center lg:justify-start gap-4 sm:gap-6 text-xs sm:text-sm text-stone-500">
               <div className="flex items-center gap-2">
-                <Zap className="w-4 h-4 text-amber-500" />
+                <Zap className="w-3 h-3 sm:w-4 sm:h-4 text-amber-500" />
                 <span>60-second setup</span>
               </div>
               <div className="flex items-center gap-2">
-                <Globe className="w-4 h-4 text-sky-500" />
+                <Globe className="w-3 h-3 sm:w-4 sm:h-4 text-sky-500" />
                 <span>No credit card</span>
               </div>
               <div className="flex items-center gap-2">
-                <Code className="w-4 h-4 text-yellow-500" />
+                <Code className="w-3 h-3 sm:w-4 sm:h-4 text-yellow-500" />
                 <span>Open source</span>
               </div>
             </div>
           </div>
 
           {/* Right Column - 3D Mockup */}
-          <div className="relative">
+          <div className="relative order-1 lg:order-2 flex justify-center lg:justify-end">
             <div
               ref={mockupRef}
-              className="relative transform rotate-3 hover:rotate-6 transition-transform duration-300"
+              className="relative transform rotate-1 lg:rotate-3 hover:rotate-2 lg:hover:rotate-6 transition-all duration-300 w-full max-w-md lg:max-w-none"
               style={{
                 transformStyle: "preserve-3d",
                 perspective: "1000px",
               }}
             >
               {/* Browser Window Mockup */}
-              <div className="bg-white rounded-3xl shadow-2xl border border-stone-200 overflow-hidden">
+              <div className="bg-white rounded-2xl lg:rounded-3xl shadow-2xl border border-stone-200 overflow-hidden">
                 {/* Browser Header */}
-                <div className="bg-stone-100 px-4 py-3 flex items-center gap-3 border-b border-stone-200">
-                  <div className="flex gap-2">
-                    <div className="w-3 h-3 bg-red-500 rounded-full" />
-                    <div className="w-3 h-3 bg-amber-500 rounded-full" />
-                    <div className="w-3 h-3 bg-green-500 rounded-full" />
+                <div className="bg-stone-100 px-3 sm:px-4 py-2 sm:py-3 flex items-center gap-2 sm:gap-3 border-b border-stone-200">
+                  <div className="flex gap-1.5 sm:gap-2">
+                    <div className="w-2 h-2 sm:w-3 sm:h-3 bg-red-500 rounded-full" />
+                    <div className="w-2 h-2 sm:w-3 sm:h-3 bg-amber-500 rounded-full" />
+                    <div className="w-2 h-2 sm:w-3 sm:h-3 bg-green-500 rounded-full" />
                   </div>
-                  <div className="flex-1 bg-white rounded-lg px-3 py-1 text-sm text-stone-500 text-center">
+                  <div className="flex-1 bg-white rounded-md sm:rounded-lg px-2 sm:px-3 py-0.5 sm:py-1 text-xs sm:text-sm text-stone-500 text-center truncate">
                     app.scrpy.ai
                   </div>
                 </div>
 
                 {/* Mockup Content */}
-                <div className="p-6 bg-stone-50">
-                  <div className="space-y-4">
-                    <div className="bg-white rounded-xl p-4 shadow-sm border border-stone-200">
-                      <div className="flex items-center gap-3 mb-3">
-                        <Terminal className="w-5 h-5 text-sky-500" />
-                        <span className="font-mono text-sm font-semibold">
+                <div className="p-3 sm:p-6 bg-stone-50">
+                  <div className="space-y-3 sm:space-y-4">
+                    <div className="bg-white rounded-lg sm:rounded-xl p-3 sm:p-4 shadow-sm border border-stone-200">
+                      <div className="flex items-center gap-2 sm:gap-3 mb-2 sm:mb-3">
+                        <Terminal className="w-4 h-4 sm:w-5 sm:h-5 text-sky-500" />
+                        <span className="font-mono text-xs sm:text-sm font-semibold">
                           Generate MCP Server
                         </span>
                       </div>
-                      <div className="bg-stone-900 text-green-400 p-3 rounded-lg font-mono text-sm">
+                      <div className="bg-stone-900 text-green-400 p-2 sm:p-3 rounded-lg font-mono text-xs sm:text-sm">
                         <div>$ scrpy generate https://docs.example.com</div>
                         <div className="text-amber-400">
                           → Creating MCP endpoint...
@@ -236,38 +234,38 @@ const Hero: React.FC = () => {
                       </div>
                     </div>
 
-                    <div className="grid grid-cols-2 gap-3">
-                      <div className="bg-white rounded-xl p-4 text-center shadow-sm border border-stone-200">
-                        <div className="text-2xl font-bold text-sky-600">
+                    <div className="grid grid-cols-2 gap-2 sm:gap-3">
+                      <div className="bg-white rounded-lg sm:rounded-xl p-3 sm:p-4 text-center shadow-sm border border-stone-200">
+                        <div className="text-lg sm:text-2xl font-bold text-sky-600">
                           100%
                         </div>
-                        <div className="text-sm text-stone-600">
+                        <div className="text-xs sm:text-sm text-stone-600">
                           Success Rate
                         </div>
                       </div>
-                      <div className="bg-white rounded-xl p-4 text-center shadow-sm border border-stone-200">
-                        <div className="text-2xl font-bold text-yellow-600">
+                      <div className="bg-white rounded-lg sm:rounded-xl p-3 sm:p-4 text-center shadow-sm border border-stone-200">
+                        <div className="text-lg sm:text-2xl font-bold text-yellow-600">
                           0ms
                         </div>
-                        <div className="text-sm text-stone-600">Latency</div>
+                        <div className="text-xs sm:text-sm text-stone-600">Latency</div>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
 
-              {/* Floating UI Elements */}
-              <div className="absolute -top-6 -right-6 bg-white rounded-xl shadow-lg border border-stone-200 p-3 animate-pulse-glow">
-                <div className="flex items-center gap-2">
-                  <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse" />
-                  <span className="text-sm font-medium text-stone-700">
+              {/* Floating UI Elements - Hidden on very small screens */}
+              <div className="hidden sm:block absolute -top-4 sm:-top-6 -right-4 sm:-right-6 bg-white rounded-lg sm:rounded-xl shadow-lg border border-stone-200 p-2 sm:p-3 animate-pulse-glow">
+                <div className="flex items-center gap-1.5 sm:gap-2">
+                  <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-green-500 rounded-full animate-pulse" />
+                  <span className="text-xs sm:text-sm font-medium text-stone-700">
                     Live
                   </span>
                 </div>
               </div>
 
-              <div className="absolute -bottom-4 -left-4 bg-gradient-to-r from-sky-500 to-yellow-600 text-white rounded-xl shadow-lg p-4 animate-float">
-                <div className="text-sm font-bold">5,000+ Developers</div>
+              <div className="hidden sm:block absolute -bottom-3 sm:-bottom-4 -left-3 sm:-left-4 bg-gradient-to-r from-sky-500 to-yellow-600 text-white rounded-lg sm:rounded-xl shadow-lg p-2 sm:p-4 animate-float">
+                <div className="text-xs sm:text-sm font-bold">5,000+ Developers</div>
                 <div className="text-xs opacity-90">Already building</div>
               </div>
             </div>

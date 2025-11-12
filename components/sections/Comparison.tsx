@@ -153,42 +153,42 @@ const Comparison: React.FC = () => {
         </div>
 
         {/* Comparison Cards */}
-        <div ref={comparisonRef} className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
+        <div ref={comparisonRef} className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 mb-8 sm:mb-12">
           {/* Traditional Scraping */}
           <div className="comparison-card relative">
-            <div className="bg-gradient-to-br from-red-50 to-orange-50 rounded-3xl border-2 border-red-200 p-8 relative overflow-hidden">
+            <div className="bg-gradient-to-br from-red-50 to-orange-50 rounded-2xl sm:rounded-3xl border-2 border-red-200 p-6 sm:p-8 relative overflow-hidden">
               {/* Background pattern */}
               <div className="absolute inset-0 bg-red-100/20" />
 
               {/* Header */}
-              <div className="relative z-10 text-center mb-8">
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-red-100 rounded-full mb-4">
-                  <X className="w-8 h-8 text-red-600" />
+              <div className="relative z-10 text-center mb-6 sm:mb-8">
+                <div className="inline-flex items-center justify-center w-12 h-12 sm:w-16 sm:h-16 bg-red-100 rounded-full mb-3 sm:mb-4">
+                  <X className="w-6 h-6 sm:w-8 sm:h-8 text-red-600" />
                 </div>
-                <Heading size="h3" className="text-red-900 mb-2">
+                <Heading size="h3" className="text-red-900 mb-2 text-lg sm:text-xl">
                   Traditional Scraping
                 </Heading>
-                <Body className="text-red-700">
+                <Body className="text-red-700 text-sm sm:text-base">
                   The old way of doing things
                 </Body>
               </div>
 
               {/* Feature list */}
-              <div className="space-y-4 relative z-10">
+              <div className="space-y-3 sm:space-y-4 relative z-10">
                 {comparisonFeatures.map((feature, index) => (
                   <div
                     key={index}
-                    className="bg-white/60 backdrop-blur rounded-xl p-4 border border-red-200"
+                    className="bg-white/60 backdrop-blur rounded-lg sm:rounded-xl p-3 sm:p-4 border border-red-200"
                   >
-                    <div className="flex items-start gap-3">
-                      <div className="flex-shrink-0 w-5 h-5 rounded-full bg-red-500 flex items-center justify-center">
-                        <X className="w-3 h-3 text-white" />
+                    <div className="flex items-start gap-2 sm:gap-3">
+                      <div className="flex-shrink-0 w-4 h-4 sm:w-5 sm:h-5 rounded-full bg-red-500 flex items-center justify-center">
+                        <X className="w-2.5 h-2.5 sm:w-3 sm:h-3 text-white" />
                       </div>
-                      <div>
-                        <div className="font-semibold text-red-900 mb-1">
+                      <div className="flex-1">
+                        <div className="font-semibold text-red-900 mb-1 text-sm sm:text-base">
                           {feature.title}
                         </div>
-                        <div className="text-sm text-red-700">
+                        <div className="text-xs sm:text-sm text-red-700">
                           {feature.traditional.text}
                         </div>
                       </div>
@@ -198,8 +198,8 @@ const Comparison: React.FC = () => {
               </div>
 
               {/* Bottom badge */}
-              <div className="relative z-10 mt-8 text-center">
-                <div className="inline-block px-4 py-2 bg-red-100 text-red-800 rounded-full text-sm font-medium">
+              <div className="relative z-10 mt-6 sm:mt-8 text-center">
+                <div className="inline-block px-3 py-1.5 sm:px-4 sm:py-2 bg-red-100 text-red-800 rounded-full text-xs sm:text-sm font-medium">
                   Outdated Technology
                 </div>
               </div>
@@ -208,9 +208,9 @@ const Comparison: React.FC = () => {
 
           {/* Scrpy */}
           <div className="comparison-card relative">
-            <div className="bg-gradient-to-br from-sky-50 to-emerald-50 rounded-3xl border-2 border-sky-300 p-8 relative overflow-hidden shadow-2xl shadow-sky-500/20">
+            <div className="bg-gradient-to-br from-sky-50 to-emerald-50 rounded-2xl sm:rounded-3xl border-2 border-sky-300 p-6 sm:p-8 relative overflow-hidden shadow-2xl shadow-sky-500/20">
               {/* Winner badge */}
-              <div className="winner-badge absolute -top-4 -right-4 bg-gradient-to-r from-sky-500 to-emerald-500 text-white px-4 py-2 rounded-full text-sm font-bold shadow-lg z-20">
+              <div className="winner-badge absolute -top-3 sm:-top-4 -right-3 sm:-right-4 bg-gradient-to-r from-sky-500 to-emerald-500 text-white px-2 py-1 sm:px-4 sm:py-2 rounded-full text-xs sm:text-sm font-bold shadow-lg z-20">
                 🏆 WINNER
               </div>
 
@@ -219,36 +219,36 @@ const Comparison: React.FC = () => {
               <div className="absolute inset-0 bg-gradient-to-br from-sky-500/5 via-transparent to-emerald-500/5 animate-gradient" />
 
               {/* Header */}
-              <div className="relative z-10 text-center mb-8">
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-sky-100 rounded-full mb-4">
-                  <Check className="w-8 h-8 text-sky-600" />
+              <div className="relative z-10 text-center mb-6 sm:mb-8">
+                <div className="inline-flex items-center justify-center w-12 h-12 sm:w-16 sm:h-16 bg-sky-100 rounded-full mb-3 sm:mb-4">
+                  <Check className="w-6 h-6 sm:w-8 sm:h-8 text-sky-600" />
                 </div>
-                <Heading size="h3" className="text-sky-900 mb-2">
+                <Heading size="h3" className="text-sky-900 mb-2 text-lg sm:text-xl">
                   Scrpy
                 </Heading>
-                <Body className="text-sky-700">
+                <Body className="text-sky-700 text-sm sm:text-base">
                   The future of web automation
                 </Body>
               </div>
 
               {/* Feature list */}
-              <div className="space-y-4 relative z-10">
+              <div className="space-y-3 sm:space-y-4 relative z-10">
                 {comparisonFeatures.map((feature, index) => (
                   <div
                     key={index}
-                    className="bg-white/60 backdrop-blur rounded-xl p-4 border border-sky-200 hover:bg-white/80 transition-all duration-300 cursor-pointer group"
+                    className="bg-white/60 backdrop-blur rounded-lg sm:rounded-xl p-3 sm:p-4 border border-sky-200 hover:bg-white/80 transition-all duration-300 cursor-pointer group"
                     onMouseEnter={() => setHoveredFeature(index)}
                     onMouseLeave={() => setHoveredFeature(null)}
                   >
-                    <div className="flex items-start gap-3">
-                      <div className="flex-shrink-0 w-5 h-5 rounded-full bg-gradient-to-r from-sky-500 to-emerald-500 flex items-center justify-center">
-                        <Check className="w-3 h-3 text-white" />
+                    <div className="flex items-start gap-2 sm:gap-3">
+                      <div className="flex-shrink-0 w-4 h-4 sm:w-5 sm:h-5 rounded-full bg-gradient-to-r from-sky-500 to-emerald-500 flex items-center justify-center">
+                        <Check className="w-2.5 h-2.5 sm:w-3 sm:h-3 text-white" />
                       </div>
-                      <div>
-                        <div className="font-semibold text-sky-900 mb-1 group-hover:text-sky-600 transition-colors">
+                      <div className="flex-1">
+                        <div className="font-semibold text-sky-900 mb-1 group-hover:text-sky-600 transition-colors text-sm sm:text-base">
                           {feature.title}
                         </div>
-                        <div className="text-sm text-sky-700">
+                        <div className="text-xs sm:text-sm text-sky-700">
                           {feature.scrpy.text}
                         </div>
                       </div>
@@ -256,24 +256,24 @@ const Comparison: React.FC = () => {
 
                     {/* Hover effect */}
                     {hoveredFeature === index && (
-                      <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-sky-500/5 to-emerald-500/5 pointer-events-none" />
+                      <div className="absolute inset-0 rounded-lg sm:rounded-xl bg-gradient-to-r from-sky-500/5 to-emerald-500/5 pointer-events-none" />
                     )}
                   </div>
                 ))}
               </div>
 
               {/* Bottom CTA */}
-              <div className="relative z-10 mt-8 text-center">
-                <Button variant="primary" size="lg" className="w-full">
+              <div className="relative z-10 mt-6 sm:mt-8 text-center">
+                <Button variant="primary" size="lg" className="w-full min-h-[44px]">
                   Try Scrpy Now
                 </Button>
-                <div className="mt-3 flex items-center justify-center gap-4 text-sm text-sky-600">
+                <div className="mt-3 flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 text-xs sm:text-sm text-sky-600">
                   <div className="flex items-center gap-1">
-                    <Zap className="w-4 h-4" />
+                    <Zap className="w-3 h-3 sm:w-4 sm:h-4" />
                     <span>Instant setup</span>
                   </div>
                   <div className="flex items-center gap-1">
-                    <Shield className="w-4 h-4" />
+                    <Shield className="w-3 h-3 sm:w-4 sm:h-4" />
                     <span>Enterprise ready</span>
                   </div>
                 </div>
@@ -283,38 +283,38 @@ const Comparison: React.FC = () => {
         </div>
 
         {/* Stats Comparison */}
-        <div className="bg-white rounded-3xl border border-stone-200 p-8 shadow-xl">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+        <div className="bg-white rounded-2xl sm:rounded-3xl border border-stone-200 p-4 sm:p-6 lg:p-8 shadow-xl">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 text-center">
             <div className="comparison-feature">
-              <div className="flex justify-center mb-3 text-red-500">
-                <Clock className="w-8 h-8" />
+              <div className="flex justify-center mb-2 sm:mb-3 text-red-500">
+                <Clock className="w-6 h-6 sm:w-8 sm:h-8" />
               </div>
-              <div className="text-2xl font-bold text-red-600 mb-1">72h</div>
-              <div className="text-sm text-stone-600">Average setup time</div>
+              <div className="text-lg sm:text-2xl font-bold text-red-600 mb-1">72h</div>
+              <div className="text-xs sm:text-sm text-stone-600">Average setup time</div>
             </div>
 
             <div className="comparison-feature">
-              <div className="flex justify-center mb-3 text-amber-500">
-                <DollarSign className="w-8 h-8" />
+              <div className="flex justify-center mb-2 sm:mb-3 text-amber-500">
+                <DollarSign className="w-6 h-6 sm:w-8 sm:h-8" />
               </div>
-              <div className="text-2xl font-bold text-amber-600 mb-1">$500+</div>
-              <div className="text-sm text-stone-600">Monthly server costs</div>
+              <div className="text-lg sm:text-2xl font-bold text-amber-600 mb-1">$500+</div>
+              <div className="text-xs sm:text-sm text-stone-600">Monthly server costs</div>
             </div>
 
             <div className="comparison-feature">
-              <div className="flex justify-center mb-3 text-sky-500">
-                <Globe className="w-8 h-8" />
+              <div className="flex justify-center mb-2 sm:mb-3 text-sky-500">
+                <Globe className="w-6 h-6 sm:w-8 sm:h-8" />
               </div>
-              <div className="text-2xl font-bold text-sky-600 mb-1">1 min</div>
-              <div className="text-sm text-stone-600">Setup with Scrpy</div>
+              <div className="text-lg sm:text-2xl font-bold text-sky-600 mb-1">1 min</div>
+              <div className="text-xs sm:text-sm text-stone-600">Setup with Scrpy</div>
             </div>
 
             <div className="comparison-feature">
-              <div className="flex justify-center mb-3 text-emerald-500">
-                <Users className="w-8 h-8" />
+              <div className="flex justify-center mb-2 sm:mb-3 text-emerald-500">
+                <Users className="w-6 h-6 sm:w-8 sm:h-8" />
               </div>
-              <div className="text-2xl font-bold text-emerald-600 mb-1">$0</div>
-              <div className="text-sm text-stone-600">Additional infrastructure</div>
+              <div className="text-lg sm:text-2xl font-bold text-emerald-600 mb-1">$0</div>
+              <div className="text-xs sm:text-sm text-stone-600">Additional infrastructure</div>
             </div>
           </div>
         </div>

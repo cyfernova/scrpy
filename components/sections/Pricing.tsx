@@ -239,14 +239,14 @@ const Pricing: React.FC = () => {
         {/* Pricing Cards */}
         <div
           ref={pricingRef}
-          className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16"
+          className="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-3 gap-6 sm:gap-8 mb-12 sm:mb-16"
         >
           {pricingPlans.map((plan, index) => (
             <div key={plan.name} className="pricing-card relative">
               {plan.popular && (
-                <div className="popular-badge absolute -top-4 left-1/2 transform -translate-x-1/2 z-10">
-                  <div className="bg-gradient-to-r from-sky-500 to-emerald-500 text-white px-4 py-2 rounded-full text-sm font-bold shadow-lg flex items-center gap-2">
-                    <Star className="w-4 h-4" />
+                <div className="popular-badge absolute -top-3 sm:-top-4 left-1/2 transform -translate-x-1/2 z-10">
+                  <div className="bg-gradient-to-r from-sky-500 to-emerald-500 text-white px-3 py-1.5 sm:px-4 sm:py-2 rounded-full text-xs sm:text-sm font-bold shadow-lg flex items-center gap-1.5 sm:gap-2">
+                    <Star className="w-3 h-3 sm:w-4 sm:h-4" />
                     Most Popular
                   </div>
                 </div>
@@ -255,78 +255,80 @@ const Pricing: React.FC = () => {
               <Card
                 className={`h-full relative ${
                   plan.popular
-                    ? "border-2 border-sky-400 shadow-2xl shadow-sky-500/20 scale-105"
+                    ? "border-2 border-sky-400 shadow-2xl shadow-sky-500/20 scale-[1.02] sm:scale-105"
                     : "border-2 " + plan.borderColor
                 }`}
               >
                 <div
-                  className={`p-8 bg-gradient-to-br ${plan.color} rounded-t-3xl`}
+                  className={`p-6 sm:p-8 bg-gradient-to-br ${plan.color} rounded-t-2xl sm:rounded-t-3xl`}
                 >
                   {/* Plan Header */}
-                  <div className="text-center mb-6">
-                    <div className="flex justify-center mb-4">
+                  <div className="text-center mb-4 sm:mb-6">
+                    <div className="flex justify-center mb-3 sm:mb-4">
                       <div
-                        className={`p-3 rounded-xl ${
+                        className={`p-2.5 sm:p-3 rounded-lg sm:rounded-xl ${
                           plan.popular
                             ? "bg-sky-500 text-white"
                             : "bg-stone-200 text-stone-700"
                         }`}
                       >
-                        {plan.icon}
+                        <div className="w-4 h-4 sm:w-6 sm:h-6">
+                          {plan.icon}
+                        </div>
                       </div>
                     </div>
 
-                    <Heading size="h3" className="mb-2 text-stone-900">
+                    <Heading size="h3" className="mb-2 text-stone-900 text-lg sm:text-xl">
                       {plan.name}
                     </Heading>
 
-                    <Body className="text-stone-600 mb-4">
+                    <Body className="text-stone-600 mb-3 sm:mb-4 text-sm sm:text-base">
                       {plan.description}
                     </Body>
                   </div>
 
                   {/* Price */}
-                  <div className="text-center mb-6">
+                  <div className="text-center mb-4 sm:mb-6">
                     <div className="flex items-baseline justify-center gap-1">
-                      <span className="text-4xl font-bold text-stone-900">
+                      <span className="text-2xl sm:text-4xl font-bold text-stone-900">
                         ${plan.price[billingCycle]}
                       </span>
-                      <span className="text-stone-600">
+                      <span className="text-sm sm:text-base text-stone-600">
                         {plan.price[billingCycle] > 0 ? "/month" : ""}
                       </span>
                     </div>
                     {billingCycle === "yearly" && plan.price.yearly > 0 && (
-                      <div className="text-sm text-emerald-600 mt-1">
+                      <div className="text-xs sm:text-sm text-emerald-600 mt-1">
                         Billed annually (${plan.price.monthly * 12}/year)
                       </div>
                     )}
                   </div>
 
                   {/* CTA Button */}
-                  <div className="mb-8">
+                  <div className="mb-4 sm:mb-8">
                     <Button
                       variant={plan.buttonVariant}
                       size="lg"
-                      className={`w-full ${plan.popular ? "group" : ""}`}
+                      className={`w-full min-h-[44px] ${plan.popular ? "group" : ""}`}
                     >
                       {plan.cta}
                       {plan.popular && (
-                        <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                        <ArrowRight className="w-3 h-3 sm:w-4 sm:h-4 group-hover:translate-x-1 transition-transform" />
                       )}
                     </Button>
                   </div>
                 </div>
 
                 {/* Features */}
-                <div className="p-8">
-                  <div className="space-y-4">
+                <div className="p-6 sm:p-8">
+                  <div className="space-y-3 sm:space-y-4">
                     {plan.features.map((feature, featureIndex) => (
                       <div
                         key={featureIndex}
-                        className="pricing-feature flex items-start gap-3"
+                        className="pricing-feature flex items-start gap-2 sm:gap-3"
                       >
                         <div
-                          className={`flex-shrink-0 w-5 h-5 rounded-full flex items-center justify-center ${
+                          className={`flex-shrink-0 w-4 h-4 sm:w-5 sm:h-5 rounded-full flex items-center justify-center ${
                             feature.included
                               ? plan.popular
                                 ? "bg-sky-500"
@@ -335,13 +337,13 @@ const Pricing: React.FC = () => {
                           }`}
                         >
                           {feature.included ? (
-                            <Check className="w-3 h-3 text-white" />
+                            <Check className="w-2.5 h-2.5 sm:w-3 sm:h-3 text-white" />
                           ) : (
-                            <X className="w-3 h-3 text-stone-500" />
+                            <X className="w-2.5 h-2.5 sm:w-3 sm:h-3 text-stone-500" />
                           )}
                         </div>
                         <div
-                          className={`text-sm ${
+                          className={`text-xs sm:text-sm ${
                             feature.included
                               ? "text-stone-700"
                               : "text-stone-400"
@@ -359,19 +361,19 @@ const Pricing: React.FC = () => {
         </div>
 
         {/* Additional Information */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 mb-12 sm:mb-16">
           {/* Money-back guarantee */}
           <Card className="bg-gradient-to-br from-emerald-50 to-teal-50 border-emerald-200">
-            <div className="p-6">
-              <div className="flex items-center gap-4 mb-4">
-                <div className="p-3 bg-emerald-500 rounded-xl">
-                  <Shield className="w-6 h-6 text-white" />
+            <div className="p-4 sm:p-6">
+              <div className="flex items-start sm:items-center gap-3 sm:gap-4 mb-3 sm:mb-4">
+                <div className="p-2 sm:p-3 bg-emerald-500 rounded-lg sm:rounded-xl flex-shrink-0">
+                  <Shield className="w-4 h-4 sm:w-6 sm:h-6 text-white" />
                 </div>
-                <div>
-                  <Heading size="h4" className="text-emerald-900">
+                <div className="text-left sm:text-center">
+                  <Heading size="h4" className="text-emerald-900 text-base sm:text-lg">
                     30-Day Money Back Guarantee
                   </Heading>
-                  <Body className="text-emerald-700">
+                  <Body className="text-emerald-700 text-sm sm:text-base">
                     Try Scrpy risk-free. If you're not satisfied, get a full
                     refund.
                   </Body>
@@ -382,16 +384,16 @@ const Pricing: React.FC = () => {
 
           {/* Support information */}
           <Card className="bg-gradient-to-br from-yellow-50 to-yellow-100 border-yellow-200">
-            <div className="p-6">
-              <div className="flex items-center gap-4 mb-4">
-                <div className="p-3 bg-yellow-500 rounded-xl">
-                  <HeadphonesIcon className="w-6 h-6 text-white" />
+            <div className="p-4 sm:p-6">
+              <div className="flex items-start sm:items-center gap-3 sm:gap-4 mb-3 sm:mb-4">
+                <div className="p-2 sm:p-3 bg-yellow-500 rounded-lg sm:rounded-xl flex-shrink-0">
+                  <HeadphonesIcon className="w-4 h-4 sm:w-6 sm:h-6 text-white" />
                 </div>
-                <div>
-                  <Heading size="h4" className="text-yellow-900">
+                <div className="text-left sm:text-center">
+                  <Heading size="h4" className="text-yellow-900 text-base sm:text-lg">
                     Expert Support
                   </Heading>
-                  <Body className="text-yellow-700">
+                  <Body className="text-yellow-700 text-sm sm:text-base">
                     Get help when you need it. Free tier includes community
                     support, Pro and Enterprise include dedicated support
                     channels.

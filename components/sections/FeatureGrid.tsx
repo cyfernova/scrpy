@@ -192,8 +192,8 @@ const result = await scrpy.scrape({
 
               {/* Code snippet */}
               {box.codeSnippet && (
-                <div className="bg-stone-900/90 backdrop-blur rounded-2xl p-4 font-mono text-sm text-green-400 mb-6">
-                  <pre className="whitespace-pre-wrap">{box.codeSnippet}</pre>
+                <div className="bg-stone-900/90 backdrop-blur rounded-xl sm:rounded-2xl p-3 sm:p-4 font-mono text-xs sm:text-sm text-green-400 mb-4 sm:mb-6 overflow-x-auto">
+                  <pre className="whitespace-pre-wrap sm:whitespace-pre">{box.codeSnippet}</pre>
                 </div>
               )}
 
@@ -414,35 +414,35 @@ const result = await scrpy.scrape({
         {/* Bento Grid Layout */}
         <div
           ref={gridRef}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 auto-rows-min"
+          className="grid grid-cols-1 xs:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4 xs:gap-6 auto-rows-min"
           style={{
             gridAutoRows: "minmax(min-content, max-content)",
           }}
         >
           {/* Row 1 - Top section */}
           {/* Box A - Large (Client-Side Architecture) */}
-          <div className="md:col-span-1 lg:col-span-2 lg:row-span-2">
+          <div className="xs:col-span-2 md:col-span-1 lg:col-span-2 lg:row-span-2">
             {renderFeatureBox(featureBoxes[0], 0)}
           </div>
 
           {/* Box B - Small (Zero Config) */}
-          <div className="md:col-span-1">
+          <div className="xs:col-span-2 md:col-span-1">
             {renderFeatureBox(featureBoxes[1], 1)}
           </div>
 
           {/* Box D - Small (Privacy First) */}
-          <div className="md:col-span-1">
+          <div className="xs:col-span-2 md:col-span-1">
             {renderFeatureBox(featureBoxes[3], 3)}
           </div>
 
           {/* Row 2 - Bottom section */}
           {/* Box C - Large (Universal Compatibility) */}
-          <div className="md:col-span-2 lg:col-span-2">
+          <div className="xs:col-span-2 md:col-span-2 lg:col-span-2">
             {renderFeatureBox(featureBoxes[2], 2)}
           </div>
 
           {/* Box E - Full (Production Infrastructure) */}
-          <div className="md:col-span-2 lg:col-span-3">
+          <div className="xs:col-span-2 md:col-span-2 lg:col-span-3">
             {renderFeatureBox(featureBoxes[4], 4)}
           </div>
         </div>

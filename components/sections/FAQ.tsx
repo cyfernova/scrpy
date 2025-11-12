@@ -144,7 +144,7 @@ const FAQ: React.FC = () => {
           </Body>
 
           {/* Category Pills */}
-          <div className="flex flex-wrap justify-center gap-2">
+          <div className="flex flex-wrap justify-center gap-1.5 sm:gap-2">
             {[
               "Technology",
               "Integrations",
@@ -156,7 +156,7 @@ const FAQ: React.FC = () => {
             ].map((category) => (
               <span
                 key={category}
-                className="px-3 py-1 bg-stone-100 text-stone-600 rounded-full text-sm font-medium hover:bg-stone-200 transition-colors cursor-pointer"
+                className="px-2 py-1 sm:px-3 sm:py-1 bg-stone-100 text-stone-600 rounded-full text-xs sm:text-sm font-medium hover:bg-stone-200 transition-colors cursor-pointer min-h-[32px] flex items-center"
               >
                 {category}
               </span>
@@ -165,8 +165,8 @@ const FAQ: React.FC = () => {
         </div>
 
         {/* FAQ Items */}
-        <div ref={faqRef} className="max-w-3xl mx-auto mb-16">
-          <div className="space-y-4">
+        <div ref={faqRef} className="max-w-3xl mx-auto mb-12 sm:mb-16">
+          <div className="space-y-3 sm:space-y-4">
             {faqItems.map((item, index) => (
               <div key={index} className="faq-item">
                 <Card
@@ -177,46 +177,46 @@ const FAQ: React.FC = () => {
                   }`}
                   onClick={() => toggleItem(index)}
                 >
-                  <div className="p-6">
-                    <div className="flex items-start justify-between">
-                      <div className="flex items-start gap-4 flex-1">
-                        <div
-                          className={`p-2 rounded-lg ${
-                            openItem === index
-                              ? "bg-sky-100 text-sky-600"
-                              : "bg-stone-100 text-stone-600"
-                          } transition-colors`}
-                        >
+                  <div className="p-4 sm:p-6">
+                    <div className="flex items-start gap-3 sm:gap-4">
+                      <div
+                        className={`p-2 rounded-lg flex-shrink-0 ${
+                          openItem === index
+                            ? "bg-sky-100 text-sky-600"
+                            : "bg-stone-100 text-stone-600"
+                        } transition-colors`}
+                      >
+                        <div className="w-4 h-4 sm:w-5 sm:h-5">
                           {item.icon}
                         </div>
-                        <div className="flex-1">
-                          <div className="flex items-start justify-between">
-                            <Heading size="h4" className="text-stone-900 mb-1">
-                              {item.question}
-                            </Heading>
-                            <ChevronDown
-                              className={`w-5 h-5 text-stone-400 transition-transform duration-300 flex-shrink-0 ml-4 mt-1 ${
-                                openItem === index ? "rotate-180" : ""
-                              }`}
-                            />
-                          </div>
-                          <div className="text-sm text-stone-500 mb-2">
-                            {item.category}
-                          </div>
-
-                          {/* Answer */}
-                          <div
-                            className={`overflow-hidden transition-all duration-300 ${
-                              openItem === index
-                                ? "max-h-96 opacity-100"
-                                : "max-h-0 opacity-0"
+                      </div>
+                      <div className="flex-1 min-w-0">
+                        <div className="flex items-start justify-between gap-2">
+                          <Heading size="h4" className="text-stone-900 mb-1 text-sm sm:text-base pr-2">
+                            {item.question}
+                          </Heading>
+                          <ChevronDown
+                            className={`w-4 h-4 sm:w-5 sm:h-5 text-stone-400 transition-transform duration-300 flex-shrink-0 mt-0.5 ${
+                              openItem === index ? "rotate-180" : ""
                             }`}
-                          >
-                            <div className="pt-4 border-t border-stone-100">
-                              <Body className="text-stone-600">
-                                {item.answer}
-                              </Body>
-                            </div>
+                          />
+                        </div>
+                        <div className="text-xs sm:text-sm text-stone-500 mb-2">
+                          {item.category}
+                        </div>
+
+                        {/* Answer */}
+                        <div
+                          className={`overflow-hidden transition-all duration-300 ${
+                            openItem === index
+                              ? "max-h-96 opacity-100"
+                              : "max-h-0 opacity-0"
+                          }`}
+                        >
+                          <div className="pt-3 sm:pt-4 border-t border-stone-100">
+                            <Body className="text-stone-600 text-sm sm:text-base">
+                              {item.answer}
+                            </Body>
                           </div>
                         </div>
                       </div>
@@ -229,48 +229,48 @@ const FAQ: React.FC = () => {
         </div>
 
         {/* Quick Links */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
-          <Card className="bg-gradient-to-br from-sky-50 to-blue-50 border-sky-200 p-6 text-center">
-            <div className="p-3 bg-sky-100 rounded-xl inline-flex mb-4">
-              <Code className="w-6 h-6 text-sky-600" />
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 mb-12 sm:mb-16">
+          <Card className="bg-gradient-to-br from-sky-50 to-blue-50 border-sky-200 p-4 sm:p-6 text-center">
+            <div className="p-2.5 sm:p-3 bg-sky-100 rounded-lg sm:rounded-xl inline-flex mb-3 sm:mb-4">
+              <Code className="w-4 h-4 sm:w-6 sm:h-6 text-sky-600" />
             </div>
-            <Heading size="h4" className="mb-2">
+            <Heading size="h4" className="mb-2 text-sm sm:text-base">
               Documentation
             </Heading>
-            <Body className="text-stone-600 mb-4">
+            <Body className="text-stone-600 mb-3 sm:mb-4 text-xs sm:text-sm">
               Comprehensive guides and API references
             </Body>
-            <Button variant="secondary" size="sm">
+            <Button variant="secondary" size="sm" className="min-h-[40px]">
               View Docs
             </Button>
           </Card>
 
-          <Card className="bg-gradient-to-br from-yellow-50 to-yellow-100 border-yellow-200 p-6 text-center">
-            <div className="p-3 bg-yellow-100 rounded-xl inline-flex mb-4">
-              <Users className="w-6 h-6 text-yellow-600" />
+          <Card className="bg-gradient-to-br from-yellow-50 to-yellow-100 border-yellow-200 p-4 sm:p-6 text-center">
+            <div className="p-2.5 sm:p-3 bg-yellow-100 rounded-lg sm:rounded-xl inline-flex mb-3 sm:mb-4">
+              <Users className="w-4 h-4 sm:w-6 sm:h-6 text-yellow-600" />
             </div>
-            <Heading size="h4" className="mb-2">
+            <Heading size="h4" className="mb-2 text-sm sm:text-base">
               Community
             </Heading>
-            <Body className="text-stone-600 mb-4">
+            <Body className="text-stone-600 mb-3 sm:mb-4 text-xs sm:text-sm">
               Join 5,000+ developers using Scrpy
             </Body>
-            <Button variant="secondary" size="sm">
+            <Button variant="secondary" size="sm" className="min-h-[40px]">
               Join Discord
             </Button>
           </Card>
 
-          <Card className="bg-gradient-to-br from-emerald-50 to-teal-50 border-emerald-200 p-6 text-center">
-            <div className="p-3 bg-emerald-100 rounded-xl inline-flex mb-4">
-              <CheckCircle className="w-6 h-6 text-emerald-600" />
+          <Card className="bg-gradient-to-br from-emerald-50 to-teal-50 border-emerald-200 p-4 sm:p-6 text-center">
+            <div className="p-2.5 sm:p-3 bg-emerald-100 rounded-lg sm:rounded-xl inline-flex mb-3 sm:mb-4">
+              <CheckCircle className="w-4 h-4 sm:w-6 sm:h-6 text-emerald-600" />
             </div>
-            <Heading size="h4" className="mb-2">
+            <Heading size="h4" className="mb-2 text-sm sm:text-base">
               Support
             </Heading>
-            <Body className="text-stone-600 mb-4">
+            <Body className="text-stone-600 mb-3 sm:mb-4 text-xs sm:text-sm">
               Get help from our expert team
             </Body>
-            <Button variant="secondary" size="sm">
+            <Button variant="secondary" size="sm" className="min-h-[40px]">
               Contact Us
             </Button>
           </Card>

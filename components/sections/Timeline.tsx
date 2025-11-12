@@ -195,11 +195,11 @@ const Timeline: React.FC = () => {
   return (
     <Section ref={sectionRef} background="muted" padding="xl">
       <Container size="xl">
-        <div className="text-center mb-20">
-          <Heading size="h2" className="mb-6">
+        <div className="text-center mb-12 sm:mb-16 lg:mb-20">
+          <Heading size="h2" className="mb-4 sm:mb-6">
             How It Works
           </Heading>
-          <Body size="lg" className="max-w-3xl mx-auto text-stone-600">
+          <Body size="lg" className="max-w-3xl mx-auto text-stone-600 text-base sm:text-lg">
             Transform any website into an MCP endpoint in four simple steps. No
             server setup, no configuration headaches, just pure automation.
           </Body>
@@ -276,19 +276,19 @@ const Timeline: React.FC = () => {
           </div>
 
           {/* Timeline Cards Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 relative z-10">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 relative z-10">
             {timelineSteps.map((step, index) => (
               <div key={index} className="relative">
                 {/* Number Badge */}
-                <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 z-20">
+                <div className="absolute -top-6 sm:-top-8 left-1/2 transform -translate-x-1/2 z-20">
                   <div className="relative">
                     {/* Background number */}
-                    <div className="text-6xl font-bold text-stone-200">
+                    <div className="text-4xl sm:text-5xl lg:text-6xl font-bold text-stone-200">
                       {step.number}
                     </div>
                     {/* Overlay number */}
                     <div
-                      className={`absolute inset-0 flex items-center justify-center text-2xl font-bold ${step.color}`}
+                      className={`absolute inset-0 flex items-center justify-center text-lg sm:text-xl lg:text-2xl font-bold ${step.color}`}
                     >
                       {step.number}
                     </div>
@@ -300,43 +300,45 @@ const Timeline: React.FC = () => {
                   ref={(el) => {
                     if (el) cardsRef.current[index] = el;
                   }}
-                  className="relative pt-12"
+                  className="relative pt-8 sm:pt-12"
                 >
                   <Card
                     variant="elevated"
-                    padding="lg"
+                    padding="md"
                     hover
-                    className={`bg-gradient-to-br ${step.bgColor} border-2 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2`}
+                    className={`bg-gradient-to-br ${step.bgColor} border-2 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 h-full`}
                   >
                     {/* Icon */}
-                    <div className={`flex justify-center mb-6 ${step.color}`}>
-                      <div className="p-4 bg-white rounded-2xl shadow-lg">
-                        {step.icon}
+                    <div className={`flex justify-center mb-4 sm:mb-6 ${step.color}`}>
+                      <div className="p-3 sm:p-4 bg-white rounded-xl sm:rounded-2xl shadow-lg">
+                        <div className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12">
+                          {step.icon}
+                        </div>
                       </div>
                     </div>
 
                     {/* Content */}
                     <div className="text-center">
-                      <Heading size="h4" className="mb-4">
+                      <Heading size="h4" className="mb-3 sm:mb-4 text-sm sm:text-base">
                         {step.title}
                       </Heading>
 
-                      <Body className="text-stone-600 leading-relaxed">
+                      <Body className="text-stone-600 leading-relaxed text-xs sm:text-sm">
                         {step.description}
                       </Body>
 
                       {/* Arrow indicator */}
-                      <div className="mt-6 flex justify-center">
-                        <div className={`p-2 rounded-full ${step.bgColor}`}>
-                          <ArrowRight className="w-5 h-5 text-stone-700" />
+                      <div className="mt-4 sm:mt-6 flex justify-center">
+                        <div className={`p-1.5 sm:p-2 rounded-full ${step.bgColor}`}>
+                          <ArrowRight className="w-3 h-3 sm:w-4 sm:h-4 lg:w-5 lg:h-5 text-stone-700" />
                         </div>
                       </div>
                     </div>
 
                     {/* Glow effect on hover */}
-                    <div className="absolute inset-0 rounded-3xl opacity-0 hover:opacity-100 transition-opacity duration-500 pointer-events-none">
+                    <div className="absolute inset-0 rounded-2xl sm:rounded-3xl opacity-0 hover:opacity-100 transition-opacity duration-500 pointer-events-none">
                       <div
-                        className={`absolute inset-0 bg-gradient-to-br ${step.bgColor} rounded-3xl blur-xl opacity-50`}
+                        className={`absolute inset-0 bg-gradient-to-br ${step.bgColor} rounded-2xl sm:rounded-3xl blur-xl opacity-50`}
                       />
                     </div>
                   </Card>
@@ -344,9 +346,9 @@ const Timeline: React.FC = () => {
 
                 {/* Mobile connector (visible on smaller screens) */}
                 {index < timelineSteps.length - 1 && (
-                  <div className="lg:hidden flex justify-center mt-8">
-                    <div className="w-12 h-px bg-gradient-to-r from-stone-300 to-stone-400" />
-                    <div className="w-2 h-2 bg-stone-400 rounded-full -ml-1 -mt-0.5" />
+                  <div className="lg:hidden flex justify-center mt-4 sm:mt-6">
+                    <div className="w-8 sm:w-12 h-px bg-gradient-to-r from-stone-300 to-stone-400" />
+                    <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-stone-400 rounded-full -ml-1 -mt-0.5" />
                   </div>
                 )}
               </div>
