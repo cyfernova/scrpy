@@ -166,12 +166,12 @@ const FinalCTA: React.FC = () => {
       icon: <CheckCircle className="w-5 h-5" />,
       text: "No credit card required",
     },
-    { icon: <Zap className="w-5 h-5" />, text: "Setup in 60 seconds" },
+    { icon: <Zap className="w-5 h-5" />, text: "Install in 60 seconds" },
     {
       icon: <Globe className="w-5 h-5" />,
-      text: "Works with any documentation site",
+      text: "Works with any documentation",
     },
-    { icon: <Code className="w-5 h-5" />, text: "Full MCP protocol support" },
+    { icon: <Code className="w-5 h-5" />, text: "Local-first & secure" },
   ];
 
   const stats = [
@@ -235,17 +235,18 @@ const FinalCTA: React.FC = () => {
               </div>
 
               <Heading size="h2" className="mb-6 gradient-text">
-                Ready to Transform Your
+                Stop Losing Productivity to
                 <br />
-                Development Workflow?
+                Context-Switching
               </Heading>
 
               <Body
                 size="lg"
                 className="text-stone-700 mb-12 max-w-2xl mx-auto"
               >
-                Join thousands of developers building the future of AI-powered
-                coding. Get started in seconds with our browser extension.
+                Join thousands of developers and knowledge workers who've
+                eliminated context-switching. Install our extension and query
+                your documentation instantly.
               </Body>
 
               {/* CTA Buttons */}
@@ -299,9 +300,9 @@ const FinalCTA: React.FC = () => {
                     Loved by 5,000+ Developers
                   </div>
                   <Body className="text-stone-600">
-                    &quot;Scrpy has completely transformed how we work with
-                    documentation. It&apos;s like having a superpower for AI
-                    development.&quot;
+                    &quot;This extension has completely transformed how I work
+                    with documentation. No more switching tabs or losing
+                    context.&quot;
                   </Body>
                 </div>
 

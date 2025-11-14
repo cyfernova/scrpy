@@ -1,4 +1,27 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Documentation RAG Agent - Browser Extension
+
+Transform any technical documentation or internal wiki into a secure, local-first RAG agent accessible directly in your IDE.
+
+## Overview
+
+Our browser extension solves the productivity drain caused by constant context-switching between applications and external documentation. By instantly crawling any website and converting it into a queryable knowledge base, developers and knowledge workers get accurate, context-aware answers without leaving their workflow.
+
+## Key Features
+
+- **Instant Website Crawling**: Convert any documentation site into a searchable knowledge base in seconds
+- **Local-First Architecture**: All data processing happens locally for maximum security and privacy
+- **IDE Integration**: Seamlessly integrate with AI-powered IDEs like Cursor
+- **Built-in Chat Interface**: Query your documentation through an intuitive chat experience
+- **RAG-Powered Responses**: Get precise answers based on your specific documentation, not generic LLM knowledge
+- **Always Current**: Re-crawl documentation to keep your knowledge base up-to-date
+
+## Use Cases
+
+- Access technical documentation without leaving your IDE
+- Query internal wikis and knowledge bases privately
+- Integrate company-specific information into your AI coding assistant
+- Maintain up-to-date knowledge of framework documentation
+- Search across multiple documentation sources simultaneously
 
 ## Getting Started
 

@@ -14,52 +14,52 @@ const Comparison: React.FC = () => {
 
   const comparisonFeatures = [
     {
-      title: 'IP Blocks',
-      description: 'Avoid getting blocked by anti-scraping measures',
-      traditional: { status: 'bad', text: '❌ Frequently blocked' },
-      scrpy: { status: 'good', text: '✅ Client-side, no blocks' }
+      title: 'Context Switching',
+      description: 'Stay focused in your development environment',
+      traditional: { status: 'bad', text: '❌ Constant tab switching' },
+      scrpy: { status: 'good', text: '✅ Query from IDE' }
     },
     {
-      title: 'Rate Limits',
-      description: 'Handle high-volume requests without throttling',
-      traditional: { status: 'bad', text: '❌ Strict limitations' },
-      scrpy: { status: 'good', text: '✅ Unlimited requests' }
+      title: 'Data Privacy',
+      description: 'Control where your data lives',
+      traditional: { status: 'bad', text: '❌ Cloud-based processing' },
+      scrpy: { status: 'good', text: '✅ 100% local-first' }
     },
     {
       title: 'Setup Time',
       description: 'Time to get up and running',
-      traditional: { status: 'bad', text: '❌ Hours to days' },
-      scrpy: { status: 'good', text: '✅ 60 seconds' }
+      traditional: { status: 'bad', text: '❌ Complex configuration' },
+      scrpy: { status: 'good', text: '✅ <60 seconds' }
     },
     {
-      title: 'Server Costs',
-      description: 'Infrastructure and maintenance expenses',
-      traditional: { status: 'bad', text: '❌ High server costs' },
-      scrpy: { status: 'good', text: '✅ Browser-powered' }
+      title: 'Documentation Access',
+      description: 'Access any documentation source',
+      traditional: { status: 'bad', text: '❌ Limited sources' },
+      scrpy: { status: 'good', text: '✅ Any website' }
     },
     {
-      title: 'Maintenance',
-      description: 'Ongoing updates and bug fixes',
-      traditional: { status: 'bad', text: '❌ Constant maintenance' },
-      scrpy: { status: 'good', text: '✅ Auto-updates' }
+      title: 'Answer Accuracy',
+      description: 'Get precise, relevant answers',
+      traditional: { status: 'bad', text: '❌ Generic responses' },
+      scrpy: { status: 'good', text: '✅ Context-aware RAG' }
     },
     {
-      title: 'JavaScript Support',
-      description: 'Handle dynamic, JavaScript-heavy sites',
-      traditional: { status: 'bad', text: '❌ Limited support' },
-      scrpy: { status: 'good', text: '✅ Full JS rendering' }
+      title: 'Internal Wikis',
+      description: 'Query proprietary documentation',
+      traditional: { status: 'bad', text: '❌ Security concerns' },
+      scrpy: { status: 'good', text: '✅ Secure local access' }
     },
     {
-      title: 'Cloudflare Bypass',
-      description: 'Navigate modern protection systems',
-      traditional: { status: 'bad', text: '❌ Often blocked' },
-      scrpy: { status: 'good', text: '✅ Seamless access' }
+      title: 'IDE Integration',
+      description: 'Work seamlessly in your editor',
+      traditional: { status: 'bad', text: '❌ External tools' },
+      scrpy: { status: 'good', text: '✅ Native integration' }
     },
     {
-      title: 'Real Browser',
-      description: 'Use actual browser rendering for accuracy',
-      traditional: { status: 'bad', text: '❌ Emulation only' },
-      scrpy: { status: 'good', text: '✅ Chrome/Firefox engine' }
+      title: 'Updates',
+      description: 'Keep documentation current',
+      traditional: { status: 'bad', text: '❌ Manual updates' },
+      scrpy: { status: 'good', text: '✅ Re-crawl anytime' }
     }
   ];
 
@@ -144,11 +144,11 @@ const Comparison: React.FC = () => {
         {/* Header */}
         <div className="text-center mb-16">
           <Heading size="h2" className="mb-6">
-            Why Developers Choose Scrpy
+            Why Choose Our Extension
           </Heading>
           <Body size="lg" className="max-w-3xl mx-auto text-stone-600">
-            Stop fighting with traditional scraping limitations. See how Scrpy&apos;s
-            client-side approach transforms web data extraction.
+            Stop context-switching and manual searching. See how our browser
+            extension transforms documentation access.
           </Body>
         </div>
 
@@ -166,10 +166,10 @@ const Comparison: React.FC = () => {
                   <X className="w-6 h-6 sm:w-8 sm:h-8 text-red-600" />
                 </div>
                 <Heading size="h3" className="text-red-900 mb-2 text-lg sm:text-xl">
-                  Traditional Scraping
+                  Manual Searching
                 </Heading>
                 <Body className="text-red-700 text-sm sm:text-base">
-                  The old way of doing things
+                  The old way of finding answers
                 </Body>
               </div>
 
@@ -224,10 +224,10 @@ const Comparison: React.FC = () => {
                   <Check className="w-6 h-6 sm:w-8 sm:h-8 text-sky-600" />
                 </div>
                 <Heading size="h3" className="text-sky-900 mb-2 text-lg sm:text-xl">
-                  Scrpy
+                  Our Extension
                 </Heading>
                 <Body className="text-sky-700 text-sm sm:text-base">
-                  The future of web automation
+                  Instant, intelligent access
                 </Body>
               </div>
 

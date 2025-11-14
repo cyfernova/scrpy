@@ -24,61 +24,61 @@ const UseCases: React.FC = () => {
 
   const useCases = [
     {
-      id: "docs",
-      title: "Documentation Teams",
-      company: "React Development Team",
+      id: "developers",
+      title: "Software Developers",
+      company: "Individual Developers & Teams",
       description:
-        "Transform React, Vue, and Svelte documentation into AI-queryable knowledge bases. Enable developers to get instant, context-aware answers about framework APIs.",
+        "Access framework documentation, API references, and technical guides directly in your IDE. Get instant, context-aware answers without switching tabs or losing focus.",
       image: "/images/case-docs.jpg",
       gradient: "from-blue-50 to-indigo-50",
       icon: <BookOpen className="w-16 h-16" />,
       stats: [
-        { label: "Response Time", value: "0.8s" },
-        { label: "Accuracy", value: "94%" },
-        { label: "Developer Satisfaction", value: "+47%" },
+        { label: "Time Saved", value: "5hrs/week" },
+        { label: "Context Retention", value: "98%" },
+        { label: "Productivity Boost", value: "+40%" },
       ],
       quote:
-        "Scrpy transformed our documentation workflow. What used to take hours of searching now takes seconds.",
-      author: "Sarah Chen",
-      role: "Tech Lead, React Team",
+        "I no longer waste time searching through documentation tabs. Everything I need is right in my IDE.",
+      author: "Alex Chen",
+      role: "Senior Full-Stack Developer",
     },
     {
-      id: "research",
-      title: "Research Labs",
-      company: "Stanford AI Lab",
+      id: "knowledge-workers",
+      title: "Knowledge Workers",
+      company: "Research & Analysis Teams",
       description:
-        "Convert academic papers and research documentation into structured knowledge bases. Power literature reviews and meta-analysis with instant access to insights.",
+        "Query internal wikis, knowledge bases, and company documentation instantly. Keep your proprietary information private while maintaining intelligent access to critical knowledge.",
       image: "/images/case-research.jpg",
       gradient: "from-yellow-50 to-yellow-100",
       icon: <Users className="w-16 h-16" />,
       stats: [
-        { label: "Papers Processed", value: "10K+" },
-        { label: "Research Speed", value: "3x faster" },
-        { label: "Citations Found", value: "50K+" },
+        { label: "Documents Indexed", value: "10K+" },
+        { label: "Query Speed", value: "<2s" },
+        { label: "Accuracy Rate", value: "95%" },
       ],
       quote:
-        "We can now query decades of research papers instantly. It\'s revolutionizing how we conduct literature reviews.",
-      author: "Dr. Marcus Rodriguez",
-      role: "Research Director",
+        "Having instant access to our internal documentation has transformed how our team collaborates and shares knowledge.",
+      author: "Dr. Sarah Martinez",
+      role: "Knowledge Management Lead",
     },
     {
       id: "enterprise",
-      title: "Enterprise Knowledge",
-      company: "Fortune 500 Tech Company",
+      title: "Enterprise Teams",
+      company: "Fortune 500 Companies",
       description:
-        "Index internal wikis, code documentation, and compliance documents for secure AI agent access. Maintain privacy while enabling intelligent search.",
+        "Deploy secure, local-first RAG agents across your organization. Index internal documentation, compliance materials, and proprietary knowledge bases without compromising security.",
       image: "/images/case-enterprise.jpg",
       gradient: "from-emerald-50 to-teal-50",
       icon: <Building className="w-16 h-16" />,
       stats: [
-        { label: "Documents Indexed", value: "50K+" },
-        { label: "Time Saved", value: "40 hrs/week" },
-        { label: "Compliance Score", value: "100%" },
+        { label: "Team Members", value: "500+" },
+        { label: "Documents", value: "50K+" },
+        { label: "Security Score", value: "100%" },
       ],
       quote:
-        "Our internal knowledge base is now as powerful as our external tools. Security and accessibility in perfect balance.",
-      author: "Jennifer Park",
-      role: "VP of Engineering",
+        "The local-first architecture gives us the security we need with the intelligence our developers demand.",
+      author: "Michael Thompson",
+      role: "CTO",
     },
   ];
 
@@ -173,12 +173,12 @@ const UseCases: React.FC = () => {
         {/* Header */}
         <div className="text-center mb-16">
           <Heading size="h2" className="mb-6">
-            Success Stories
+            Who Benefits
           </Heading>
 
           <Body size="lg" className="max-w-3xl mx-auto text-stone-600">
-            See how leading teams and organizations use Scrpy to transform their
-            documentation into intelligent, AI-ready knowledge bases.
+            See how developers and knowledge workers use our browser extension to
+            eliminate context-switching and access documentation instantly.
           </Body>
         </div>
 
@@ -187,9 +187,8 @@ const UseCases: React.FC = () => {
           {useCases.map((useCase, index) => (
             <div
               key={useCase.id}
-              className={`story-card grid grid-cols-1 lg:grid-cols-2 gap-12 items-center ${
-                index % 2 === 1 ? "lg:grid-cols-2 lg:grid-flow-col-dense" : ""
-              }`}
+              className={`story-card grid grid-cols-1 lg:grid-cols-2 gap-12 items-center ${index % 2 === 1 ? "lg:grid-cols-2 lg:grid-flow-col-dense" : ""
+                }`}
             >
               {/* Content - alternates left/right */}
               <div className={`${index % 2 === 1 ? "lg:col-start-2" : ""}`}>

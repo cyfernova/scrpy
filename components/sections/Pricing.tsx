@@ -30,7 +30,7 @@ const Pricing: React.FC = () => {
   const pricingPlans = [
     {
       name: "Free",
-      description: "Perfect for developers getting started",
+      description: "Perfect for individual developers",
       price: {
         monthly: 0,
         yearly: 0,
@@ -40,74 +40,74 @@ const Pricing: React.FC = () => {
       buttonVariant: "secondary" as const,
       popular: false,
       features: [
-        { name: "Up to 100 requests/day", included: true },
-        { name: "Basic scraping capabilities", included: true },
+        { name: "Up to 5 documentation sites", included: true },
+        { name: "Basic crawling & indexing", included: true },
+        { name: "Built-in chat interface", included: true },
+        { name: "Local-first processing", included: true },
+        { name: "IDE integration (Cursor)", included: true },
         { name: "Community support", included: true },
-        { name: "WebSocket connections", included: true },
-        { name: "Rate limiting", included: true },
-        { name: "API documentation", included: true },
         { name: "Priority support", included: false },
-        { name: "Custom models", included: false },
-        { name: "SLA guarantee", included: false },
-        { name: "Dedicated infrastructure", included: false },
-        { name: "Advanced analytics", included: false },
+        { name: "Unlimited documentation sites", included: false },
+        { name: "Advanced search", included: false },
+        { name: "Team collaboration", included: false },
         { name: "Custom integrations", included: false },
+        { name: "Dedicated support", included: false },
       ],
-      cta: "Start Free",
+      cta: "Install Free",
       icon: <Rocket className="w-6 h-6" />,
     },
     {
       name: "Pro",
-      description: "For professional teams and growing projects",
+      description: "For professional developers and small teams",
       price: {
-        monthly: 49,
-        yearly: 39,
+        monthly: 29,
+        yearly: 24,
       },
       color: "from-sky-50 to-blue-50",
       borderColor: "border-sky-300",
       buttonVariant: "primary" as const,
       popular: true,
       features: [
-        { name: "Up to 10,000 requests/day", included: true },
-        { name: "Advanced scraping with JS rendering", included: true },
-        { name: "Email support", included: true },
-        { name: "WebSocket connections", included: true },
-        { name: "Custom rate limits", included: true },
-        { name: "API documentation", included: true },
-        { name: "Priority support", included: true },
-        { name: "Custom models (5 included)", included: true },
-        { name: "99.9% SLA guarantee", included: true },
-        { name: "Shared infrastructure", included: true },
-        { name: "Basic analytics", included: true },
-        { name: "Standard integrations", included: true },
+        { name: "Unlimited documentation sites", included: true },
+        { name: "Advanced crawling & indexing", included: true },
+        { name: "Enhanced chat interface", included: true },
+        { name: "Local-first processing", included: true },
+        { name: "All IDE integrations", included: true },
+        { name: "Priority email support", included: true },
+        { name: "Advanced search & filters", included: true },
+        { name: "Custom knowledge bases", included: true },
+        { name: "Export & sharing features", included: true },
+        { name: "Usage analytics", included: true },
+        { name: "Team collaboration (up to 5)", included: true },
+        { name: "Premium integrations", included: true },
       ],
       cta: "Start Pro Trial",
       icon: <Zap className="w-6 h-6" />,
     },
     {
       name: "Enterprise",
-      description: "For large organizations with custom needs",
+      description: "For large teams and organizations",
       price: {
-        monthly: 199,
-        yearly: 159,
+        monthly: 99,
+        yearly: 79,
       },
       color: "from-yellow-50 to-yellow-100",
       borderColor: "border-yellow-300",
       buttonVariant: "tertiary" as const,
       popular: false,
       features: [
-        { name: "Unlimited requests", included: true },
-        { name: "Enterprise-grade scraping", included: true },
-        { name: "24/7 phone support", included: true },
-        { name: "WebSocket connections", included: true },
-        { name: "No rate limiting", included: true },
-        { name: "Custom API documentation", included: true },
+        { name: "Everything in Pro", included: true },
+        { name: "Unlimited team members", included: true },
+        { name: "SSO & advanced security", included: true },
         { name: "Dedicated account manager", included: true },
-        { name: "Unlimited custom models", included: true },
-        { name: "99.99% SLA guarantee", included: true },
-        { name: "Dedicated infrastructure", included: true },
+        { name: "24/7 priority support", included: true },
+        { name: "Custom deployment options", included: true },
         { name: "Advanced analytics dashboard", included: true },
-        { name: "Custom integrations & white-labeling", included: true },
+        { name: "API access", included: true },
+        { name: "Custom integrations", included: true },
+        { name: "SLA guarantee", included: true },
+        { name: "Training & onboarding", included: true },
+        { name: "White-label options", included: true },
       ],
       cta: "Contact Sales",
       icon: <Crown className="w-6 h-6" />,
@@ -203,8 +203,8 @@ const Pricing: React.FC = () => {
           </Heading>
 
           <Body size="lg" className="max-w-3xl mx-auto text-stone-600 mb-8">
-            Choose the plan that fits your needs. All plans include core
-            scraping features and WebSocket support. Upgrade or downgrade
+            Choose the plan that fits your needs. All plans include local-first
+            processing and secure documentation access. Upgrade or downgrade
             anytime.
           </Body>
 
@@ -212,21 +212,19 @@ const Pricing: React.FC = () => {
           <div className="inline-flex items-center bg-white rounded-full p-1 border border-stone-200 shadow-sm">
             <button
               onClick={() => setBillingCycle("monthly")}
-              className={`px-6 py-2 rounded-full text-sm font-medium transition-all duration-200 ${
-                billingCycle === "monthly"
+              className={`px-6 py-2 rounded-full text-sm font-medium transition-all duration-200 ${billingCycle === "monthly"
                   ? "bg-stone-900 text-white"
                   : "text-stone-600 hover:text-stone-900"
-              }`}
+                }`}
             >
               Monthly
             </button>
             <button
               onClick={() => setBillingCycle("yearly")}
-              className={`px-6 py-2 rounded-full text-sm font-medium transition-all duration-200 ${
-                billingCycle === "yearly"
+              className={`px-6 py-2 rounded-full text-sm font-medium transition-all duration-200 ${billingCycle === "yearly"
                   ? "bg-stone-900 text-white"
                   : "text-stone-600 hover:text-stone-900"
-              }`}
+                }`}
             >
               Yearly
               <span className="ml-2 px-2 py-0.5 bg-emerald-500 text-white text-xs rounded-full">
@@ -253,11 +251,10 @@ const Pricing: React.FC = () => {
               )}
 
               <Card
-                className={`h-full relative ${
-                  plan.popular
+                className={`h-full relative ${plan.popular
                     ? "border-2 border-sky-400 shadow-2xl shadow-sky-500/20 scale-[1.02] sm:scale-105"
                     : "border-2 " + plan.borderColor
-                }`}
+                  }`}
               >
                 <div
                   className={`p-6 sm:p-8 bg-gradient-to-br ${plan.color} rounded-t-2xl sm:rounded-t-3xl`}
@@ -266,11 +263,10 @@ const Pricing: React.FC = () => {
                   <div className="text-center mb-4 sm:mb-6">
                     <div className="flex justify-center mb-3 sm:mb-4">
                       <div
-                        className={`p-2.5 sm:p-3 rounded-lg sm:rounded-xl ${
-                          plan.popular
+                        className={`p-2.5 sm:p-3 rounded-lg sm:rounded-xl ${plan.popular
                             ? "bg-sky-500 text-white"
                             : "bg-stone-200 text-stone-700"
-                        }`}
+                          }`}
                       >
                         <div className="w-4 h-4 sm:w-6 sm:h-6">
                           {plan.icon}
@@ -328,13 +324,12 @@ const Pricing: React.FC = () => {
                         className="pricing-feature flex items-start gap-2 sm:gap-3"
                       >
                         <div
-                          className={`flex-shrink-0 w-4 h-4 sm:w-5 sm:h-5 rounded-full flex items-center justify-center ${
-                            feature.included
+                          className={`flex-shrink-0 w-4 h-4 sm:w-5 sm:h-5 rounded-full flex items-center justify-center ${feature.included
                               ? plan.popular
                                 ? "bg-sky-500"
                                 : "bg-emerald-500"
                               : "bg-stone-300"
-                          }`}
+                            }`}
                         >
                           {feature.included ? (
                             <Check className="w-2.5 h-2.5 sm:w-3 sm:h-3 text-white" />
@@ -343,11 +338,10 @@ const Pricing: React.FC = () => {
                           )}
                         </div>
                         <div
-                          className={`text-xs sm:text-sm ${
-                            feature.included
+                          className={`text-xs sm:text-sm ${feature.included
                               ? "text-stone-700"
                               : "text-stone-400"
-                          }`}
+                            }`}
                         >
                           {feature.name}
                         </div>

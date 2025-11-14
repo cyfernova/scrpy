@@ -47,63 +47,63 @@ const FeatureGrid: React.FC = () => {
 
   const featureBoxes: FeatureBox[] = [
     {
-      id: "architecture",
+      id: "crawling",
       size: "large",
-      title: "Client-Side Architecture",
+      title: "Instant Documentation Crawling",
       description:
-        "Modern browser-based approach eliminates server-side restrictions and delivers unmatched reliability.",
+        "Automatically crawl and index any technical documentation, internal wiki, or knowledge base in seconds.",
       icon: <Database className="w-16 h-16" />,
       gradient: "from-yellow-50 to-yellow-100",
-      features: ["No IP blocks", "Zero rate limits", "JavaScript rendering"],
-      codeSnippet: `// Client-side scraping
-const result = await scrpy.scrape({
-  url: 'https://docs.example.com',
-  selectors: ['h1', '.content', '.api-table']
+      features: ["Any website supported", "Smart content extraction", "Automatic updates"],
+      codeSnippet: `// Query your documentation
+const answer = await agent.query({
+  question: 'How do I deploy to production?',
+  context: 'deployment-guide'
 });`,
     },
     {
       id: "instant",
       size: "small",
-      title: "Zero Configuration",
+      title: "Setup in Seconds",
       description:
-        "Deploy in 60 seconds flat. No servers, no setup, no headaches.",
+        "Install the browser extension and start querying documentation instantly. No complex configuration required.",
       icon: <Zap className="w-16 h-16" />,
       gradient: "from-yellow-50 to-yellow-100",
-      metric: "60s",
+      metric: "<60s",
     },
     {
       id: "compatibility",
       size: "large",
-      title: "Universal Compatibility",
+      title: "Seamless IDE Integration",
       description:
-        "Works seamlessly with all major AI coding tools and platforms.",
+        "Works perfectly with AI-powered IDEs like Cursor, providing context-aware answers without leaving your workflow.",
       icon: <Globe className="w-16 h-16" />,
       gradient: "from-yellow-50 to-yellow-100",
-      partners: ["Claude Code", "Kilo Code", "Cline", "OpenCode"],
-      stats: "4+ Tools",
+      partners: ["Cursor IDE", "VS Code", "GitHub Copilot", "Claude"],
+      stats: "4+ IDEs",
     },
     {
       id: "privacy",
       size: "small",
-      title: "Privacy First",
-      description: "GDPR compliant with enterprise-grade security built-in.",
+      title: "Local-First & Private",
+      description: "All processing happens locally. Your data never leaves your machine, ensuring complete security.",
       icon: <Lock className="w-16 h-16" />,
       gradient: "from-yellow-50 to-yellow-100",
-      badge: "GDPR Ready",
+      badge: "100% Private",
     },
     {
       id: "infrastructure",
       size: "full",
-      title: "Production Infrastructure",
+      title: "Built-in Chat Interface",
       description:
-        "Enterprise-ready infrastructure with real-time monitoring and global CDN distribution.",
+        "Query documentation instantly through an intuitive chat interface powered by RAG technology for accurate, context-aware responses.",
       icon: <Cloud className="w-16 h-16" />,
       gradient: "from-yellow-50 to-yellow-100",
       metrics: [
-        { label: "Global CDN", value: "99.9%" },
-        { label: "Uptime", value: "<100ms" },
-        { label: "Response", value: "500+" },
-        { label: "Locations" },
+        { label: "Response Time", value: "<2s" },
+        { label: "Accuracy", value: "95%+" },
+        { label: "Sources", value: "Any" },
+        { label: "Languages", value: "All" },
       ],
       worldMap: true,
     },
@@ -421,11 +421,11 @@ const result = await scrpy.scrape({
       <Container size="xl">
         <div className="text-center mb-16">
           <Heading size="h2" className="mb-6">
-            Packed with Power
+            Everything You Need
           </Heading>
           <Body size="lg" className="max-w-3xl mx-auto text-stone-600">
-            Everything you need to transform documentation into intelligent MCP
-            endpoints. Built for developers, designed for scale.
+            Transform documentation into an intelligent, queryable knowledge base
+            accessible directly in your development environment.
           </Body>
         </div>
 

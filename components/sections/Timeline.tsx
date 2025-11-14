@@ -22,34 +22,34 @@ const Timeline: React.FC = () => {
       number: "01",
       title: "Install Extension",
       description:
-        "Browser integration with one click. Add Scrpy to Chrome, Firefox, or Edge in seconds.",
+        "Install our browser extension for Chrome, Firefox, or Edge. One-click installation takes seconds.",
       icon: <Download className="w-12 h-12" />,
       color: "text-sky-500",
       bgColor: "from-sky-50 to-sky-100",
     },
     {
       number: "02",
-      title: "Scrape Intelligently",
+      title: "Crawl Documentation",
       description:
-        "Client-side extraction bypasses all restrictions. No more blocked requests or rate limits.",
+        "Navigate to any documentation site and click to crawl. Our intelligent crawler extracts and indexes all content automatically.",
       icon: <Zap className="w-12 h-12" />,
       color: "text-amber-500",
       bgColor: "from-amber-50 to-amber-100",
     },
     {
       number: "03",
-      title: "Generate MCP",
+      title: "Create RAG Agent",
       description:
-        "Automated server provisioning with WebSocket support. Production-ready endpoints instantly.",
+        "Instantly convert crawled content into a local RAG knowledge base. All processing happens securely on your machine.",
       icon: <Server className="w-12 h-12" />,
       color: "text-yellow-500",
       bgColor: "from-yellow-50 to-yellow-100",
     },
     {
       number: "04",
-      title: "Connect Agents",
+      title: "Query in Your IDE",
       description:
-        "Seamless integration with elite AI coding tools. Claude Code, Kilo Code, Cline, OpenCode.",
+        "Access your documentation directly in IDEs like Cursor. Get context-aware answers without leaving your workflow.",
       icon: <Plug className="w-12 h-12" />,
       color: "text-emerald-500",
       bgColor: "from-emerald-50 to-emerald-100",
@@ -200,8 +200,8 @@ const Timeline: React.FC = () => {
             How It Works
           </Heading>
           <Body size="lg" className="max-w-3xl mx-auto text-stone-600 text-base sm:text-lg">
-            Transform any website into an MCP endpoint in four simple steps. No
-            server setup, no configuration headaches, just pure automation.
+            Transform any website into an intelligent RAG agent in four simple
+            steps. No complex setup, just instant access to your documentation.
           </Body>
         </div>
 

@@ -135,12 +135,12 @@ const Hero: React.FC = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center min-h-[70vh] lg:min-h-[80vh] py-8 lg:py-0">
           {/* Left Column - Content */}
           <div className="text-center lg:text-left order-2 lg:order-1">
-            <Eyebrow className="mb-4 sm:mb-6">AI Infrastructure</Eyebrow>
+            <Eyebrow className="mb-4 sm:mb-6">Documentation RAG Agent</Eyebrow>
 
             <Heading ref={headlineRef} size="h1" className="mb-6 sm:mb-8">
-              <span className="block">Transform Documentation</span>
-              <span className="block">Into Intelligent</span>
-              <span className="gradient-text block">MCP Endpoints</span>
+              <span className="block">Transform Any Website</span>
+              <span className="block">Into Your Personal</span>
+              <span className="gradient-text block">AI Assistant</span>
             </Heading>
 
             <div
@@ -148,9 +148,9 @@ const Hero: React.FC = () => {
               className="max-w-2xl mx-auto lg:mx-0 mb-8 sm:mb-12"
             >
               <Body size="lg" className="text-stone-600 text-base sm:text-lg">
-                Client-side scraping meets enterprise AI. Deploy
-                production-ready MCP servers for Claude Code, Kilo Code, Cline,
-                and OpenCode in seconds.
+                Stop context-switching. Our browser extension instantly converts
+                any documentation into a secure, local-first RAG agent accessible
+                directly in your IDE.
               </Body>
             </div>
 
@@ -176,15 +176,15 @@ const Hero: React.FC = () => {
             <div className="flex flex-wrap items-center justify-center lg:justify-start gap-4 sm:gap-6 text-xs sm:text-sm text-stone-500">
               <div className="flex items-center gap-2">
                 <Zap className="w-3 h-3 sm:w-4 sm:h-4 text-amber-500" />
-                <span>60-second setup</span>
+                <span>Instant setup</span>
               </div>
               <div className="flex items-center gap-2">
                 <Globe className="w-3 h-3 sm:w-4 sm:h-4 text-sky-500" />
-                <span>No credit card</span>
+                <span>Local-first & secure</span>
               </div>
               <div className="flex items-center gap-2">
                 <Code className="w-3 h-3 sm:w-4 sm:h-4 text-yellow-500" />
-                <span>Open source</span>
+                <span>IDE integrated</span>
               </div>
             </div>
           </div>
@@ -220,16 +220,16 @@ const Hero: React.FC = () => {
                       <div className="flex items-center gap-2 sm:gap-3 mb-2 sm:mb-3">
                         <Terminal className="w-4 h-4 sm:w-5 sm:h-5 text-sky-500" />
                         <span className="font-mono text-xs sm:text-sm font-semibold">
-                          Generate MCP Server
+                          Query Documentation
                         </span>
                       </div>
                       <div className="bg-stone-900 text-green-400 p-2 sm:p-3 rounded-lg font-mono text-xs sm:text-sm">
-                        <div>$ scrpy generate https://docs.example.com</div>
+                        <div>How do I implement authentication?</div>
                         <div className="text-amber-400">
-                          → Creating MCP endpoint...
+                          → Searching documentation...
                         </div>
                         <div className="text-green-400">
-                          ✓ Server ready at localhost:3000
+                          ✓ Found 5 relevant sections
                         </div>
                       </div>
                     </div>

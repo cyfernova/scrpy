@@ -14,26 +14,26 @@ const MetricsBar: React.FC = () => {
 
   const metrics = [
     {
-      value: "5,000+",
-      label: "Developers",
+      value: "10,000+",
+      label: "Active Users",
       icon: <Users className="w-6 h-6" />,
       delay: 0,
     },
     {
-      value: "99.9%",
-      label: "Uptime",
+      value: "<60s",
+      label: "Setup Time",
       icon: <Zap className="w-6 h-6" />,
       delay: 0.2,
     },
     {
-      value: "400+",
-      label: "AI Models",
+      value: "100%",
+      label: "Local-First",
       icon: <Server className="w-6 h-6" />,
       delay: 0.4,
     },
     {
-      value: "OSS",
-      label: "Open Source",
+      value: "Any",
+      label: "Documentation",
       icon: <Code2 className="w-6 h-6" />,
       delay: 0.6,
     },
