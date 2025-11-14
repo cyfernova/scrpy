@@ -45,7 +45,7 @@ const FeatureGrid: React.FC = () => {
   const gridRef = useRef<HTMLDivElement>(null);
   const cardsRef = useRef<HTMLDivElement[]>([]);
 
-  const featureBoxes = [
+  const featureBoxes: FeatureBox[] = [
     {
       id: "architecture",
       size: "large",

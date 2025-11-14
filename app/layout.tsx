@@ -25,12 +25,13 @@ export const metadata: Metadata = {
     description: "Transform Documentation Into Intelligent MCP Endpoints. Deploy production-ready servers in seconds.",
     type: "website",
   },
-  viewport: {
-    width: "device-width",
-    initialScale: 1.0,
-    maximumScale: 1.0,
-    userScalable: false,
-  },
+};
+
+export const viewport = {
+  width: "device-width",
+  initialScale: 1.0,
+  maximumScale: 1.0,
+  userScalable: false,
 };
 
 export default function RootLayout({
